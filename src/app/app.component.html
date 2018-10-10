@@ -7,6 +7,10 @@
 
 <!-- Modele reprofuctible-->
 
+
+<div *ngFor='let elem of dtpservice?.dataApp'>{{elem.name}} <br> {{elem.desc}}</div>
+
+
     <div class="input-group mb-3">
       <h4>1 - Artistes Musiciens : Frais liés à l'instruement de music</h4>
       <input type="text" class="form-control" placeholder="Montant en euros" aria-label="Username" aria-describedby="basic-addon1">
@@ -16,16 +20,17 @@
                   <i class="fas fa-info"></i>
           </button>
         </p>
-       <div id="collapse1" [ngbCollapse]="!isCollapsed[0]"> 
+        <div id="collapse1" [ngbCollapse]="!isCollapsed[0]"> 
           <div class="card">
             <div class="card-body">
                 Achat, entretien et frais annexes, plus les interets d'emprunt
+                
             </div>
           </div>
         </div>
       </div>
 
-
+      
 
 <!--  onglet 2-->
 

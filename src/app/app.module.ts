@@ -4,6 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { UiModule } from './ui/ui.module';
+import { DataAppService} from '../app/data-app.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { UiModule } from './ui/ui.module';
     BrowserModule,
     UiModule,
   ],
-  providers: [],
+  providers: [DataAppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
