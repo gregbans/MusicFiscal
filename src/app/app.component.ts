@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MusicFiscal';
+  isCollapsed: boolean[] = new Array(false, false, false, false,false, false,false, false,false, false,false)
+    constructor() {
+      this.isCollapsed = new Array(false, false, false, false,false, false,false, false,false, false,false, );
+    }
 }
