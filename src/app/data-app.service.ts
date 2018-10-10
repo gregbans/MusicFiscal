@@ -17,9 +17,5 @@ export class DataAppService {
   
   
       ]
-  constructor() {
- 
-
-
-   }
+  constructor() {}
 }

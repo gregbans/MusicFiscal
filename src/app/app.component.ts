@@ -11,6 +11,5 @@ export class AppComponent {
   isCollapsed: boolean[] = new Array(false, false, false, false,false, false,false, false,false, false,false)
     constructor(private dtpservice:DataAppService) {
       this.isCollapsed = new Array(false, false, false, false,false, false,false, false,false, false,false, );
-      alert(this.dtpservice.dataApp);
     }
 }
