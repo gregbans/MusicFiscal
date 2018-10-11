@@ -14,19 +14,19 @@
     <div *ngFor='let elem of dtpservice?.dataApp' class="input-group mb-3">
       <h4>{{elem.name}}</h4>
       <input type="text" id="inputList" class="form-control" placeholder="Montant en euros" aria-label="Username" aria-describedby="basic-addon1">
-      <p>
-          <button type="button" class="btn btn-outline-primary" (click)="isCollapsed[{{array}}]= !isCollapsed[{{array}}]"
-                  [attr.aria-expanded]="!isCollapsed[{{array}}]" aria-controls="collapse{{idcollapse}}">
+      <!-- <p>
+          <button type="button" class="btn btn-outline-primary" (click)="isCollapsed[{{elem.array}}]= !isCollapsed[{{elem.array}}]"
+                  [attr.aria-expanded]="!isCollapsed[{{elem.array}}]" aria-controls="collapse + {{elem.idcollapse}}">
                   <i class="fas fa-info"></i>
           </button>
-        </p>
-        <div id="collapse{{idcollapse}}" [ngbCollapse]="!isCollapsed[{{array}}]"> 
+        </p> -->
+        <!-- <div id="collapse + {{elem.idcollapse}}" [ngbCollapse]="!isCollapsed[{{elem.array}}]"> 
           <div class="card">
             <div class="card-body">
                 {{elem.desc}}
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </app-layout>
