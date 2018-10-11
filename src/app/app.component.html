@@ -8,197 +8,26 @@
 <!-- Modele reprofuctible-->
 
 
-<div *ngFor='let elem of dtpservice?.dataApp'>{{elem.name}} <br> {{elem.desc}}</div>
+<!-- <div *ngFor='let elem of dtpservice?.dataApp'>{{elem.name}} <br> {{elem.desc}}</div> -->
 
 
-    <div class="input-group mb-3">
-      <h4>1 - Artistes Musiciens : Frais liés à l'instruement de music</h4>
-      <input type="text" class="form-control" placeholder="Montant en euros" aria-label="Username" aria-describedby="basic-addon1">
+    <div *ngFor='let elem of dtpservice?.dataApp' class="input-group mb-3">
+      <h4>{{elem.name}}</h4>
+      <input type="text" id="inputList" class="form-control" placeholder="Montant en euros" aria-label="Username" aria-describedby="basic-addon1">
       <p>
-          <button type="button" class="btn btn-outline-primary" (click)="isCollapsed[0]= !isCollapsed[0]"
-                  [attr.aria-expanded]="!isCollapsed[0]" aria-controls="collapse1">
+          <button type="button" class="btn btn-outline-primary" (click)="isCollapsed[{{array}}]= !isCollapsed[{{array}}]"
+                  [attr.aria-expanded]="!isCollapsed[{{array}}]" aria-controls="collapse{{idcollapse}}">
                   <i class="fas fa-info"></i>
           </button>
         </p>
-        <div id="collapse1" [ngbCollapse]="!isCollapsed[0]"> 
+        <div id="collapse{{idcollapse}}" [ngbCollapse]="!isCollapsed[{{array}}]"> 
           <div class="card">
             <div class="card-body">
-                Achat, entretien et frais annexes, plus les interets d'emprunt
-                
+                {{elem.desc}}
             </div>
           </div>
         </div>
       </div>
-
-      
-
-<!--  onglet 2-->
-
-<div class="input-group mb-3">
-    <h4>2 - Frais de representation</h4>
-    <input type="text" class="form-control" placeholder="Montant en euros" aria-label="Username" aria-describedby="basic-addon1">
-    <p>
-        <button type="button" class="btn btn-outline-primary" (click)="isCollapsed[1] = !isCollapsed[1]; console.log(isCollapsed)"
-                [attr.aria-expanded]="isCollapsed[1]" aria-controls="collapse2">
-                <i class="fas fa-info"></i>
-        </button>
-      </p>
-      <div id="collapse2" [ngbCollapse]="!isCollapsed[1]">
-        <div class="card">
-          <div class="card-body">
-              Frais vestimentaires et de coiffure, de représentation, de communications téléphoniques professionnelles, de formation et de fournitures diverses (partitions, pupitre...)
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- onglet 3
-
-    <div class="input-group mb-3">
-        <h4>3 - Frais de transport</h4>
-        <input type="text" class="form-control" placeholder="Montant en euros" aria-label="Username" aria-describedby="basic-addon1">
-        <p>
-            <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-                    [attr.aria-expanded]="isCollapsed" aria-controls="collapse3">
-                    <i class="fas fa-info"></i>
-            </button>
-          </p>
-          <div id="collapse3" [ngbCollapse]="!isCollapsed">
-            <div class="card">
-              <div class="card-body">
-                  Frais de transport entre le domicile et le lieux de travail.
-              </div>
-            </div>
-          </div>
-        </div>
-      -->
-
-      
-    <!-- onglet 
-    
-    <div class="input-group mb-3">
-        <h4> 4 - Autres frais de transport</h4>
-        <input type="text" class="form-control" placeholder="Montant en euros" aria-label="Username" aria-describedby="basic-addon1">
-        <p>
-            <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-                    [attr.aria-expanded]="isCollapsed" aria-controls="collapse4">
-                    <i class="fas fa-info"></i>
-            </button>
-          </p>
-          <div id="collapse4" [ngbCollapse]="!isCollapsed">
-            <div class="card">
-              <div class="card-body">
-                  Deplacement entre un logement provisoire et le lieu de travail.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-    
-    <div class="input-group mb-3">
-        <h4> 5 - Frais de repas</h4>
-        <input type="text" class="form-control" placeholder="Montant en euros" aria-label="Username" aria-describedby="basic-addon1">
-        <p>
-            <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
-                    [attr.aria-expanded]="isCollapsed" aria-controls="collapse5">
-                    <i class="fas fa-info"></i>
-            </button>
-          </p>
-          <div id="collapse5" [ngbCollapse]="!isCollapsed">
-            <div class="card">
-              <div class="card-body">
-                  Frais supplementaires de repas sur le lieu de travail.
-              </div>
-            </div>
-          </div>
-        </div>
-      -->
-    <ul>
-    <!-- onglet -->
-        <li class="list-group-item">
-          6 - Frais de repas en dépalcement
-          <input type="text"><a class="btn btn-primary" data-toggle="collapse" href="#collapse6" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Plus d'info
-          </a>
-        
-        <div class="collapse" id="collapse6">
-          <div class="card card-body">
-              A preciser.
-          </div>
-        </div>
-      </li>
-    <!-- onglet -->
-        <li class="list-group-item">
-          7 - Frais de documentation
-          <input type="text">
-          <a class="btn btn-primary" data-toggle="collapse" href="#collapse7" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Plus d'info
-          </a>
-        
-        <div class="collapse" id="collapse7">
-          <div class="card card-body">
-              A preciser.
-          </div>
-        </div>
-      </li>
-    <!-- onglet -->
-        <li class="list-group-item">
-          8 - Frais de local professionnel
-          <input type="text"><a class="btn btn-primary" data-toggle="collapse" href="#collapseEx" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Plus d'info
-          </a>
-        
-        <div class="collapse" id="collapseEx">
-          <div class="card card-body">
-              A preciser.
-          </div>
-        </div>
-      </li>
-    <!-- onglet -->
-        <li class="list-group-item">
-          9 - Frais de Materiel
-          <input type="text">
-          <a class="btn btn-primary" data-toggle="collapse" href="#collapse9" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Plus d'info
-          </a>
-        
-        <div class="collapse" id="collapse9">
-          <div class="card card-body">
-              Frais de matériel, mobilier et fournitures autres que celles visées au 2 ci-dessus
-          </div>
-        </div>
-      </li>
-    <!-- onglet -->
-        <li class="list-group-item">
-          10 - Cotisations professionnelles
-          <input type="text">
-          <a class="btn btn-primary" data-toggle="collapse" href="#collapse10" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Plus d'info
-          </a>
-        
-        <div class="collapse" id="collapse10">
-          <div class="card card-body">
-              A preciser.
-          </div>
-        </div>
-      </li>
-    <!-- onglet -->
-        <li class="list-group-item">
-          11 - Autres Frais
-          <input type="text">
-          <a class="btn btn-primary" data-toggle="collapse" href="#collapse11" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Plus d'info
-          </a>
-      
-        <div class="collapse" id="collapse11">
-          <div class="card card-body">
-              A preciser.
-          </div>
-        </div>
-      </li>
-      </ul>
-
     </div>
   </app-layout>
 
