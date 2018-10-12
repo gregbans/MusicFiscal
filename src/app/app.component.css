@@ -1,8 +1,7 @@
-.card-body {
+/* .card-body {
     width: 25rem;
-};
+}; */
 
-.inputList{
+#inputList{
     width: 25rem;
-    text-align: left;
 }

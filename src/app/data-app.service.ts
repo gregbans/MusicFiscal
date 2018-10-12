@@ -4,7 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataAppService {
- public dataApp:any[] = [
+
+    getDataApp(){
+      return this.dataApp;
+    }
+
+  public dataApp:any[] = [
   {
     "name": "1 - Artistes Musiciens",
     "desc": "Frais liés à l'instruement de music. Achat, entretien et frais annexes, plus les interets d'emprunt",
