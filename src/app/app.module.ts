@@ -5,10 +5,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { UiModule } from './ui/ui.module';
 import { DataAppService} from '../app/data-app.service';
+import { LoginComponent } from './login/login.component';
+import { PolicyComponent } from './policy/policy.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    PolicyComponent
   ],
   imports: [
     NgbModule.forRoot(),
