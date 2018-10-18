@@ -1,45 +1,6 @@
-<app-layout>
-  <div class="container">
-<!-- <div>
-    <div class="totalDefis">
-      <h1> Total defiscalisable :</h1>
-      <h1>14 650,67€</h1>
-    </div>
-
-Modele reprofuctible-->
-
-
-<!-- <div *ngFor='let elem of dtpservice?.dataApp'>{{elem.name}} <br> {{elem.desc}}</div> -->
-
-  <!-- <div *ngFor='let elem of dataStock'>
-      <div class="input-group mb-6">
-        <h4>{{elem.name}}</h4>
-        <p class="d-flex align-content-center">
-            <button type="button" class="btn btn-outline-primary " (click)="isCollapsed[elem.array]= !isCollapsed[elem.array]"
-                    [attr.aria-expanded]="!isCollapsed[elem.array]" attr.aria-controls="collapse-{{elem.idcollapse}}">
-                    <i class="fas fa-info"></i>
-            </button>
-          </p> 
-
-        <input type="text" id="inputList" class="form-control" placeholder="Montant en euros" aria-label="Username" aria-describedby="basic-addon1">
-      
-      </div>
-
-      <div id="collapse-{{elem.idcollapse}}" [ngbCollapse]="!isCollapsed[elem.array]"> 
-          <div class="card">
-            <div class="card-body">
-                {{elem.desc}}
-            </div>
-          </div>
-          <br>
-      </div> 
-  </div>
-
-</div>-->
-<app-login></app-login>
+<div class="container">
+<router-outlet></router-outlet>
 </div>
-</app-layout> 
-
 
 
 

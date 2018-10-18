@@ -7,12 +7,9 @@ import { DataAppService} from '../app/data-app.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  dataStock: any[]= []
 
-  isCollapsed: boolean[] = new Array(false, false, false, false,false, false,false, false,false, false,false)
 
-  constructor(private dataAppService:DataAppService) {
-      this.isCollapsed = new Array(false, false, false, false,false, false,false, false,false, false,false, );
-      this.dataStock = dataAppService.getDataApp();
+  constructor() {
+
     }
 }

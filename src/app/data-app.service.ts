@@ -9,10 +9,10 @@ export class DataAppService {
       return this.dataApp;
     }
 
-  public dataApp:any[] = [
+  private dataApp:any[] = [
   {
     "name": "1 - Artistes Musiciens",
-    "desc": "Frais liés à l'instruement de music. Achat, entretien et frais annexes, plus les interets d'emprunt",
+    "desc": "Frais liés à l'instruement de musique. Achat, entretien et frais annexes, plus les interets d'emprunt",
     "array": 0,
     "idcollapse": 0
   },
